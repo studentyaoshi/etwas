@@ -22,7 +22,7 @@ Epigenetic element-based Transcriptome-Wide Association Studies
 > Please describe in details, and attach your command line and log messages if possible.  
 
 ## Requirements  
-> - [**GCTA**] \( v1.91.5 \)(http://cnsgenomics.com/software/gcta/)
+> - [**GCTA**](http://cnsgenomics.com/software/gcta/) \( v1.91.5 \)
 > - **bedtools** \( v2.25.0 \)
 > - **Python** \( recommended: python2.7 \)
 > - **R** \( >= 3.2.4 \)
