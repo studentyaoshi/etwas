@@ -21,7 +21,8 @@ Epigenetic element-based Transcriptome-Wide Association Studies
 > You can contact :email:studentyaoshi@stu.xjtu.edu.cn when you have any questions, suggestions, comments, etc.  
 > Please describe in details, and attach your command line and log messages if possible.  
 
-## Requirements
+## Requirements  
+> - **GCTA** \( v1.91.5 \)
 > - **bedtools** \( v2.25.0 \)
 > - **Python** \( recommended: python2.7 \)
 > - **R** \( >= 3.2.4 \)
