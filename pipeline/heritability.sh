@@ -6,9 +6,9 @@ do gene=`echo $line|awk '{print$1}'`
 	let start=$position1-1000000
 	let end=$position2+1000000
 	if [ $start -lt 0 ]; then start=0; fi
-	plink --bfile ../../genotype/GTEx.chr$chr --maf 0.05 --chr $chr --from-bp $start --to-bp $end --make-bed --out ../tem/$gene
+	plink --bfile ../data/genotype/GTEx.chr$chr --maf 0.05 --chr $chr --from-bp $start --to-bp $end --make-bed --out ../tem/$gene
 	gcta64 --bfile ../tem/$gene --make-grm --out ../tem/${gene} --thread-num 5
-	for tissue in {'Brain_Amygdala','Brain_Anterior_cingulate_cortex_BA24','Brain_Caudate_basal_ganglia','Brain_Cerebellar_Hemisphere','Brain_Cerebellum','Brain_Cortex','Brain_Frontal_Cortex_BA9','Brain_Hippocampus','Brain_Hypothalamus','Brain_Nucleus_accumbens_basal_ganglia','Brain_Putamen_basal_ganglia','Brain_Spinal_cord_cervical_c-1','Brain_Substantia_nigra','Whole_Blood'}
+#####	for tissue in {'Brain_Amygdala','Brain_Anterior_cingulate_cortex_BA24','Brain_Caudate_basal_ganglia','Brain_Cerebellar_Hemisphere','Brain_Cerebellum','Brain_Cortex','Brain_Frontal_Cortex_BA9','Brain_Hippocampus','Brain_Hypothalamus','Brain_Nucleus_accumbens_basal_ganglia','Brain_Putamen_basal_ganglia','Brain_Spinal_cord_cervical_c-1','Brain_Substantia_nigra','Whole_Blood'}
 	do
 		mpheno_number=`head -1 ../../expression/GTEx_Analysis_2017-06-05_v8_RNASeQCv1.1.9_gene_tpm.gct.${tissue}.final|sed 's/\t/\n/g'|sed '1,2d' |grep -n -w ${gene}|awk -F ':' '{print$1}'`
 		gcta64 --reml --grm ../tem/${gene} --pheno ../../expression/GTEx_Analysis_2017-06-05_v8_RNASeQCv1.1.9_gene_tpm.gct.${tissue}.final --mpheno $mpheno_number --thread-num 5 --out ../tem/${tissue}.${gene}
