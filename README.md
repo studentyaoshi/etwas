@@ -1,3 +1,3 @@
-![bigclogo](./logo/bigc.png "bigclogo"){:height="50%" width="50%"}
+![bigclogo](./logo/bigc.png "bigclogo" =400*300)
 # epigenetic element-based transcriptome-wide association studies (ETWAS)
 
