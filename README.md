@@ -28,4 +28,8 @@ Epigenetic element-based Transcriptome-Wide Association Studies
 > - [**Plink**](http://zzz.bwh.harvard.edu/plink/epidetails.shtml)
 > - [**FUSION**](http://gusevlab.org/projects/fusion/)
 > - [**R**](https://www.r-project.org/)
->	- R packages: glmnet, doParallel. 
+>	- R packages: glmnet, doParallel.  
+
+## Schematic of ETWAS
+### Heritability
+Our current study is based on the premise that gene expression is heritable. Considering the heritability genes typically enriched for trait associations, we estimated gene expression heritability and only focused on the significantly heritable genes in further analyses.
