@@ -12,8 +12,7 @@ Epigenetic element-based Transcriptome-Wide Association Studies
 ### Author
 > **Yao Shi**, **Guo Yan**  
 > Key Laboratory of Biomedical Information Engineering of Ministry of Education, School of Life Science and Technology, Xi'an Jiaotong University, Xi'an, Shaanxi Province, 710049, P. R. China  
-> :email:guoyan253@xjtu.edu.cn
-<br>
+> :email:guoyan253@xjtu.edu.cn  
 ### Maintainer
 > **Yao Shi**  
 > You can contact :email:studentyaoshi@stu.xjtu.edu.cn when you have any questions, suggestions, comments, etc.  
