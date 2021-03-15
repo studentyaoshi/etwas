@@ -22,8 +22,9 @@ Epigenetic element-based Transcriptome-Wide Association Studies
 > Please describe in details, and attach your command line and log messages if possible.  
 
 ## Requirements  
-> - [**GCTA**](http://cnsgenomics.com/software/gcta/) \( v1.91.5 \)
-> - **bedtools** \( v2.25.0 \)
-> - **Python** \( recommended: python2.7 \)
-> - **R** \( >= 3.2.4 \)
-	- R packages: caret (6.0-73), ggplot2 (2.2.0), doParallel (3.2.4), ROCR (1.0-7), etc. ( Dependent packages for different models ) 
+> - [**GCTA**](http://cnsgenomics.com/software/gcta/)
+> - [**bedtools**](http://quinlanlab.org/tutorials/bedtools/bedtools.html)
+> - [**Python**](https://www.python.org/downloads/)
+> - [**Plink**](http://zzz.bwh.harvard.edu/plink/epidetails.shtml)
+> - [**R**](https://www.r-project.org/)
+>	- R packages: glmnet, doParallel. 
