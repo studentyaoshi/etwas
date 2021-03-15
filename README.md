@@ -23,8 +23,9 @@ Epigenetic element-based Transcriptome-Wide Association Studies
 
 ## Requirements  
 > - [**GCTA**](http://cnsgenomics.com/software/gcta/)
-> - [**bedtools**](http://quinlanlab.org/tutorials/bedtools/bedtools.html)
+> - [**Bedtools**](http://quinlanlab.org/tutorials/bedtools/bedtools.html)
 > - [**Python**](https://www.python.org/downloads/)
 > - [**Plink**](http://zzz.bwh.harvard.edu/plink/epidetails.shtml)
+> - [**FUSION**](http://gusevlab.org/projects/fusion/)
 > - [**R**](https://www.r-project.org/)
 >	- R packages: glmnet, doParallel. 
