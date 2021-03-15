@@ -9,9 +9,11 @@ Epigenetic element-based Transcriptome-Wide Association Studies
 ## Contact
 #### Citation
 > Yao Shi, et al. [Epigenetic Element-Based Transcriptome-Wide Association Study Identifies Novel Genes for Bipolar Disorder](https://www.medrxiv.org/content/10.1101/2020.07.23.20161174v3). medRxiv 2020.  
+> The data that support the findings of this study are available from the corresponding author upon reasonable request.
 #### Author
 > **Yao Shi**, **Guo Yan**  
-> Key Laboratory of Biomedical Information Engineering of Ministry of Education, School of Life Science and Technology, Xi'an Jiaotong University, Xi'an, Shaanxi Province, 710049, P. R. China  
+> National and Local Joint Engineering Research Center of Biodiagnosis and Biotherapy, The Second Affiliated Hospital, Xi'an Jiaotong University, Xi'an, Shaanxi, 710004, P. R. China  
+> Key Laboratory of Biomedical Information Engineering of Ministry of Education, School of Life Science and Technology, Xi'an Jiaotong University, Xi'an, Shaanxi, 710049, P. R. China  
 > :email:guoyan253@xjtu.edu.cn  
 #### Maintainer
 > **Yao Shi**  
