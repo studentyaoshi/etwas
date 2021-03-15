@@ -16,9 +16,9 @@ Shi Yao, Jing-Miao Ding, Hao Wu, Ruo-Han Hao, Yu Rong, Xin Ke, Jing Guo, Shan-Sh
 > :email:guoyan253@xjtu.edu.cn
 <br>
 ### Maintainer
->**Yao Shi**
+> **Yao Shi**
 >
->You can contact :email:studentyaoshi@stu.xjtu.edu.cn when you have any questions, suggestions, comments, etc.
+> You can contact :email:studentyaoshi@stu.xjtu.edu.cn when you have any questions, suggestions, comments, etc.
 >
->Please describe in details, and attach your command line and log messages if possible.
+> Please describe in details, and attach your command line and log messages if possible.
 
