@@ -37,9 +37,6 @@ Our current study is based on the premise that gene expression is heritable. Con
 	- ~/etwas/data/genotype/GTEx.plink `genotype`
 	- ~/etwas/data/expression/$tissue.final `gene expression`
 	- ~/etwas/data/expression/gtex.gene.final.nomhc.anno `gene annotation`
-- Need softwares:
-	- [Plink](http://zzz.bwh.harvard.edu/plink/epidetails.shtml)
-	- [GCTA](http://cnsgenomics.com/software/gcta/)
 - Run
 ```
 cd ~/etwas/pipeline
@@ -68,8 +65,6 @@ For each gene *x*, we first included SNPs within the 1 MB region around gene. We
 	- ~/etwas/data/genotype/GTEx.plink `genotype`
 	- ~/etwas/data/expression/$tissue.final `gene expression`
 	- ~/etwas/data/expression/gtex.gene.final.nomhc.anno `gene annotation`
-- Need Softwares:
-	- [Plink](http://zzz.bwh.harvard.edu/plink/epidetails.shtml)
 - Run
 ```
 # Get genotype for each gene

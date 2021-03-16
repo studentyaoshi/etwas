@@ -6,8 +6,6 @@ genegeno='../tem'
 
 cat $genelist|while read gene
 do
-	#h2
-	h2=`grep -w $gene ../result/${tissue}.heritability|cut -d' ' -f 3`
 	for i in {a..e}
 	do
 		# get eqtl
