@@ -3,14 +3,14 @@
 </div>
 
 # ETWAS
-*E*pigenetic element-based *T*ranscriptome-*W*ide *A*ssociation Studies
+**E**pigenetic element-based **T**ranscriptome-**W**ide **A**ssociation **S**tudies
 ## Introduction  
 > Transcriptome-wide association studies (TWAS) providing a powerful approach to identify novel disease risk genes and uncover possible causal genes at loci identified previously by genome-wide association study (GWAS). However, these methods did not consider the importance of epigenetic regulation in gene expression. Here, we developed a novel epigenetic element-based transcriptome-wide association study (ETWAS) that tested the effects of genetic variants on gene expression levels with the epigenetic features as prior and further mediated the association between predicted expression and complex diseases.  
 
 ## Contact
 ### Citation
 > **Method**: **Yao Shi**, et al. [Epigenetic Element-Based Transcriptome-Wide Association Study Identifies Novel Genes for Bipolar Disorder](https://www.medrxiv.org/content/10.1101/2020.07.23.20161174v3). medRxiv 2020.  
-> **Application**: **Yao Shi**, et al. A Transcriptome-wide Association Study Identifies Susceptibility Genes for Parkinson’s Disease. *Under Review*.
+> **Application**: **Yao Shi**, et al. A Transcriptome-wide Association Study Identifies Susceptibility Genes for Parkinson’s Disease. *Under Review*.  
 > The data that support the findings of this study are available from the corresponding author upon reasonable request.
 ### Author
 > **Yao Shi**, **Guo Yan**  
