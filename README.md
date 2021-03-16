@@ -31,5 +31,18 @@ Epigenetic element-based Transcriptome-Wide Association Studies
 >	- R packages: glmnet, doParallel.  
 
 ## Schematic of ETWAS
-### Heritability
+### Heritability calculation
 Our current study is based on the premise that gene expression is heritable. Considering the heritability genes typically enriched for trait associations, we estimated gene expression heritability and only focused on the significantly heritable genes in further analyses.
+- Need files:
+	- ~/etwas/data/genotype/GTEx.plink
+	- ~/etwas/data/expression/$tissue.final
+- Need software:
+	- [Plink](http://zzz.bwh.harvard.edu/plink/epidetails.shtml)
+	- [GCTA](http://cnsgenomics.com/software/gcta/)
+- Run
+```
+cd ~/etwas/pipeline
+sh heritability.sh $tissue
+```
+- Generate
+	- ~/etwas/result/$tissue.heritability

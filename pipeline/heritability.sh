@@ -1,5 +1,5 @@
 tissue=$1
-cat ../data/expression/gtex.gene.final.nomhc.anno.test|while read line
+cat ../data/expression/gtex.gene.final.nomhc.anno|while read line
 do gene=`echo $line|awk '{print$1}'`
 	chr=`echo $line|awk '{print$2}'`
 	position1=`echo $line|awk '{print$3}'`
