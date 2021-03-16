@@ -34,8 +34,9 @@ Epigenetic element-based Transcriptome-Wide Association Studies
 ### Heritability calculation
 Our current study is based on the premise that gene expression is heritable. Considering the heritability genes typically enriched for trait associations, we estimated gene expression heritability and only focused on the significantly heritable genes in further analyses.
 - Need files:
-	- ~/etwas/data/genotype/GTEx.plink
-	- ~/etwas/data/expression/$tissue.final
+	- ~/etwas/data/genotype/GTEx.plink #genotype
+	- ~/etwas/data/expression/$tissue.final #gene expression
+	- ~/etwas/data/expression/gtex.gene.final.nomhc.anno #gene annotation
 - Need softwares:
 	- [Plink](http://zzz.bwh.harvard.edu/plink/epidetails.shtml)
 	- [GCTA](http://cnsgenomics.com/software/gcta/)
@@ -48,11 +49,11 @@ The $tissue indicates the tissue name, such as Brain_Amygdala.
 - Generate
 	- ~/etwas/result/$tissue.heritability
 ```
-ENSG00000186092.4 V(G)/Vp 0.000001 0.065874 Pval 0.5
-ENSG00000278566.1 V(G)/Vp 0.000001 0.096536 Pval 0.5
-ENSG00000273547.1 V(G)/Vp 0.000001 0.067163 Pval 0.5
-ENSG00000187634.11 V(G)/Vp 0.034583 0.072451 Pval 0.2765
-ENSG00000188976.10 V(G)/Vp 0.000001 0.079977 Pval 0.5
+ENSG00000177989.13 V(G)/Vp 0.166964 0.113988 Pval 0.03208
+ENSG00000130487.5 V(G)/Vp 0.063453 0.091522 Pval 0.218
+ENSG00000217442.3 V(G)/Vp 0.177535 0.114586 Pval 0.02242
+ENSG00000205560.12 V(G)/Vp 0.049175 0.082262 Pval 0.233
+ENSG00000100288.19 V(G)/Vp 0.000001 0.063587 Pval 0.5
 ```
 We estimated the cis heritability (1 Mb window around each gene) for each gene using restricted maximum likelihood analysis, a variance-component model with a genetic relationship matrix (GRM) estimated from genotype data in GCTA software. Genes with heritability P-value less than 0.05 were regarded as significantly heritable genes.
 
@@ -62,8 +63,24 @@ For each gene *x*, we first included SNPs within the 1 MB region around gene. We
 2. We then annotated the SNPs with epigenetic annotations. The epigenomic data included chromatin segmentation states, transcription factor binding sites (TFBS), and DNase I hypersensitive sites (DHS). For the chromatin segmentation states, we utilized the 15-state model and grouped them into four categories: *promoter*, *enhancer*, *transcription*, and *others*. Individually, *TssA* and *TssAFlnk* were considered to be a *promoter*; *TxFlnk*, *Tx*, and *TxWk* were considered to be a *transcription*; *EnhG* and *Enh* were considered to be an *enhancer*, and the rest were classified as the *others*.  
 	For each SNP, an epigenomic feature was labeled if the SNP overlapped with the feature.  
 3. We obtained multiple SNP sets according to the eQTL *P*-value threshold (5×10<sup>-2</sup>, 1×10<sup>-2</sup>, 1×10<sup>-3</sup>, 1×10<sup>-4</sup>, 1×10<sup>-5</sup>, 1×10<sup>-6</sup>), chromatin segmentation state (*promoter*, *transcription*, *enhancer*, and *others*), TFBS annotation, and DHS annotation.  
+- Need files:
+	- ~/etwas/result/${tissue}.P005 # gene list with heritability p-value less than 0.05
+	- ~/etwas/data/genotype/GTEx.plink #genotype
+	- ~/etwas/data/expression/$tissue.final #gene expression
+	- ~/etwas/data/expression/gtex.gene.final.nomhc.anno #gene annotation 
+
+- Need Softwares:
+	- [Plink](http://zzz.bwh.harvard.edu/plink/epidetails.shtml)
+- Run
 ```
 # Get genotype for each gene
+cd ~/etwas/pipeline
+sh genopheno.sh $tissue
+
+# Epigenetic-based SNP grouping
+sh
 ```
+-Generate
+
 ### Train 
 For each SNP set *z*, we built an expression prediction model in the training dataset by using the lasso and the elastic net (α = 0.5) methods as implemented in the *glmnet* R package.
