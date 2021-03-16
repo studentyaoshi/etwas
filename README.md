@@ -54,7 +54,7 @@ ENSG00000100288.19 V(G)/Vp 0.000001 0.063587 Pval 0.5
 ```
 We estimated the cis heritability (1 Mb window around each gene) for each gene using restricted maximum likelihood analysis, a variance-component model with a genetic relationship matrix (GRM) estimated from genotype data in GCTA software. Genes with heritability P-value less than 0.05 were regarded as significantly heritable genes.
 
-### Train gene expression model
+### Model generation
 For each gene *x*, we first included SNPs within the 1 MB region around gene. We trained and evaluated the models for gene expression prediction in each round *y* of tenfold cross-validation using the following steps:  
 1. We performed eQTL analyses with SNPs located within 1 Mb of the transcription start/end sites of the gene using the training data.  
 2. We then annotated the SNPs with epigenetic annotations. The epigenomic data included chromatin segmentation states, transcription factor binding sites (TFBS), and DNase I hypersensitive sites (DHS). For the chromatin segmentation states, we utilized the 15-state model and grouped them into four categories: *promoter*, *enhancer*, *transcription*, and *others*. Individually, *TssA* and *TssAFlnk* were considered to be a *promoter*; *TxFlnk*, *Tx*, and *TxWk* were considered to be a *transcription*; *EnhG* and *Enh* were considered to be an *enhancer*, and the rest were classified as the *others*.  
@@ -76,4 +76,5 @@ sh genopheno.sh $tissue
 sh train.sh $tissue
 ```
 - Generate
-
+### Model evaluation
+### 
