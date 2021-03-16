@@ -64,10 +64,10 @@ For each gene *x*, we first included SNPs within the 1 MB region around gene. We
 	For each SNP, an epigenomic feature was labeled if the SNP overlapped with the feature.  
 3. We obtained multiple SNP sets according to the eQTL *P*-value threshold (5×10<sup>-2</sup>, 1×10<sup>-2</sup>, 1×10<sup>-3</sup>, 1×10<sup>-4</sup>, 1×10<sup>-5</sup>, 1×10<sup>-6</sup>), chromatin segmentation state (*promoter*, *transcription*, *enhancer*, and *others*), TFBS annotation, and DHS annotation.  
 - Need files:
-	- ~/etwas/result/${tissue}.P005 # gene list with heritability p-value less than 0.05
-	- ~/etwas/data/genotype/GTEx.plink #genotype
-	- ~/etwas/data/expression/$tissue.final #gene expression
-	- ~/etwas/data/expression/gtex.gene.final.nomhc.anno #gene annotation 
+	- ~/etwas/result/${tissue}.P005 `gene list with heritability p-value less than 0.05`
+	- ~/etwas/data/genotype/GTEx.plink `genotype`
+	- ~/etwas/data/expression/$tissue.final `gene expression`
+	- ~/etwas/data/expression/gtex.gene.final.nomhc.anno `gene annotation`
 
 - Need Softwares:
 	- [Plink](http://zzz.bwh.harvard.edu/plink/epidetails.shtml)
