@@ -74,6 +74,13 @@ For each gene *x*, we first included SNPs within the 1 MB region around gene. We
 	- ~/etwas/data/expression/$tissue.final `gene expression`
 	- ~/etwas/data/expression/gtex.gene.final.nomhc.anno `gene annotation`
 	- ~/etwas/data/epigenetic/\* `epigenetic annotation`
+```
+chr1	10131	10369
+chr1	10427	10574
+chr1	57344	57408
+chr1	235654	235786
+chr1	235887	235971
+```
 - Run
 ```
 # Get genotype for each gene
