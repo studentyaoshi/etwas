@@ -37,6 +37,13 @@ Our current study is based on the premise that gene expression is heritable. Con
 	- ~/etwas/data/genotype/GTEx.plink `genotype`
 	- ~/etwas/data/expression/$tissue.final `gene expression`
 	- ~/etwas/data/expression/gtex.gene.final.nomhc.anno `gene annotation`
+```
+ENSG00000186092.4	1	69091	70008	+
+ENSG00000278566.1	1	450740	451678	-
+ENSG00000273547.1	1	685716	686654	-
+ENSG00000187634.11	1	923928	944581	+
+ENSG00000188976.10	1	944204	959309	-
+```
 - Run
 ```
 cd ~/etwas/pipeline
