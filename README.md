@@ -65,6 +65,4 @@ For each gene *x*, we first included SNPs within the 1 MB region around gene. We
     (iii) We obtained multiple SNP sets according to the eQTL *P*-value threshold (5×10<sup>-2</sup>, 1×10<sup>-2</sup>, 1×10<sup>-3</sup>, 1×10<sup>-4</sup>, 1×10<sup>-5</sup>, 1×10<sup>-6</sup>), chromatin segmentation state (promoter, transcription, enhancer, and others), TFBS annotation, and DHS annotation.  
 
 ### Train 
-       For each SNP set *z*, we built an expression prediction model in the training dataset by using the lasso and the elastic net (α = 0.5) methods as implemented in the *glmnet* R package.  
-       test  
-       df
+For each SNP set *z*, we built an expression prediction model in the training dataset by using the lasso and the elastic net (α = 0.5) methods as implemented in the *glmnet* R package.
