@@ -9,7 +9,7 @@
 
 ## Contact
 ### Citation
-> *Yao Shi*, et al. [Epigenetic Element-Based Transcriptome-Wide Association Study Identifies Novel Genes for Bipolar Disorder](https://www.medrxiv.org/content/10.1101/2020.07.23.20161174v3). medRxiv 2020.  
+> **Yao Shi**, et al. [Epigenetic Element-Based Transcriptome-Wide Association Study Identifies Novel Genes for Bipolar Disorder](https://www.medrxiv.org/content/10.1101/2020.07.23.20161174v3). medRxiv 2020.  
 > The data that support the findings of this study are available from the corresponding author upon reasonable request.
 ### Author
 > **Yao Shi**, **Guo Yan**  
@@ -94,10 +94,12 @@ sh train.sh $tissue
 	- ~/etwas/result/$tissue.etwas
 ```
 Brain_Amygdala.ENSG00000169885.9.enh.dn.tn.0.05 0.09449683 Brain_Amygdala.ENSG00000169885.9.enh.dn.tn.0.05 0.09388865 lasso 0.09449683
-Brain_Amygdala.ENSG00000116151.13.allhmm.dydn.tytn.0.05 0.15841292 Brain_Amygdala.ENSG00000116151.13.allhmm.dydn.tn.0.05 0.16607721 enet 0.16607721
-Brain_Amygdala.ENSG00000157916.19.allhmm.dydn.tn.0.05 0.17903954 Brain_Amygdala.ENSG00000157916.19.allhmm.dydn.tn.0.05 0.17795527 lasso 0.17903954
-Brain_Amygdala.ENSG00000157881.13.tx.dydn.tn.0.05 0.14076166 Brain_Amygdala.ENSG00000157881.13.enh.dn.tn.0.05 0.12117371 lasso 0.14076166
-Brain_Amygdala.ENSG00000157873.17.allhmm.dydn.tn.0.05 0.22521832 Brain_Amygdala.ENSG00000157873.17.allhmm.dydn.tn.0.05 0.28396610 enet 0.28396610
+Brain_Amygdala.ENSG00000116151.13.tx.dn.tn.0.05 0.12374554 Brain_Amygdala.ENSG00000116151.13.tx.dn.tn.0.05 0.12354224 lasso 0.12374554
+Brain_Amygdala.ENSG00000157916.19.tx.dn.tn.0.05 0.11186665 Brain_Amygdala.ENSG00000157916.19.tx.dn.tn.0.05 0.11255954 enet 0.11255954
+Brain_Amygdala.ENSG00000157881.13.enh.dn.tn.0.05 0.12066406 Brain_Amygdala.ENSG00000157881.13.enh.dn.tn.0.05 0.12117371 enet 0.12117371
+Brain_Amygdala.ENSG00000157873.17.tx.dn.tn.0.05 0.17463774 Brain_Amygdala.ENSG00000157873.17.tx.dn.tn.0.05 0.23938381 enet 0.23938381
 ```
-### Model evaluation
-### 
+### Get final model
+For each model, we evaluated its prediction performance by cross-validation R<sup>2</sup> between the predicted gene expression and the observed gene expression of the testing data and averaged all the cross-validation data. For each gene *x*, the model with the highest mean R<sup>2</sup> in the testing data was selected as the best model. Based on the parameters of the best model, we performed the eQTL analyses again using all the samples in the reference data and constructed each gene’s final prediction model.
+### TWAS
+After getting the best model for gene *x*, we could predict expression directly for genotyped samples using the effect sizes from the reference panels and measure the association between predicted expression and a trait. On the other hand, the [ImpG-Summary](https://academic.oup.com/bioinformatics/article/30/20/2906/2422225) algorithm has been used to extend to train on the genetic component of expression based on GWAS summary data. Thus, we could indirectly estimate the association between predicted expression and a trait as the weighted linear combination of SNP-trait standardized effect sizes while accounting for linkage disequilibrium (LD) among SNPs. [FUSION] (http://gusevlab.org/projects/fusion/) was used to conduct the transcriptome-wide association testing. The 1000 Genomes v3 LD panel was used for the ETWAS.
