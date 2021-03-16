@@ -9,7 +9,8 @@
 
 ## Contact
 ### Citation
-> **Yao Shi**, et al. [Epigenetic Element-Based Transcriptome-Wide Association Study Identifies Novel Genes for Bipolar Disorder](https://www.medrxiv.org/content/10.1101/2020.07.23.20161174v3). medRxiv 2020.  
+> **Method**: **Yao Shi**, et al. [Epigenetic Element-Based Transcriptome-Wide Association Study Identifies Novel Genes for Bipolar Disorder](https://www.medrxiv.org/content/10.1101/2020.07.23.20161174v3). medRxiv 2020.  
+> **Application**: **Yao Shi**, et al. A Transcriptome-wide Association Study Identifies Susceptibility Genes for Parkinson’s Disease. *Under Review*.
 > The data that support the findings of this study are available from the corresponding author upon reasonable request.
 ### Author
 > **Yao Shi**, **Guo Yan**  
@@ -101,5 +102,7 @@ Brain_Amygdala.ENSG00000157873.17.tx.dn.tn.0.05 0.17463774 Brain_Amygdala.ENSG00
 ```
 ### Get final model
 For each model, we evaluated its prediction performance by cross-validation R<sup>2</sup> between the predicted gene expression and the observed gene expression of the testing data and averaged all the cross-validation data. For each gene *x*, the model with the highest mean R<sup>2</sup> in the testing data was selected as the best model. Based on the parameters of the best model, we performed the eQTL analyses again using all the samples in the reference data and constructed each gene’s final prediction model.
+- Need files:
+	- ~/etwas/result/$tissue.etwas
 ### TWAS
 After getting the best model for gene *x*, we could predict expression directly for genotyped samples using the effect sizes from the reference panels and measure the association between predicted expression and a trait. On the other hand, the [ImpG-Summary](https://academic.oup.com/bioinformatics/article/30/20/2906/2422225) algorithm has been used to extend to train on the genetic component of expression based on GWAS summary data. Thus, we could indirectly estimate the association between predicted expression and a trait as the weighted linear combination of SNP-trait standardized effect sizes while accounting for linkage disequilibrium (LD) among SNPs. [FUSION](http://gusevlab.org/projects/fusion/) was used to conduct the transcriptome-wide association testing. The 1000 Genomes v3 LD panel was used for the ETWAS.
