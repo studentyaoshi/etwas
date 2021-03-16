@@ -91,5 +91,13 @@ sh genopheno.sh $tissue
 sh train.sh $tissue
 ```
 - Generate
+	- ~/etwas/result/$tissue.etwas
+```
+Brain_Amygdala.ENSG00000169885.9.enh.dn.tn.0.05 0.09449683 Brain_Amygdala.ENSG00000169885.9.enh.dn.tn.0.05 0.09388865 lasso 0.09449683
+Brain_Amygdala.ENSG00000116151.13.allhmm.dydn.tytn.0.05 0.15841292 Brain_Amygdala.ENSG00000116151.13.allhmm.dydn.tn.0.05 0.16607721 enet 0.16607721
+Brain_Amygdala.ENSG00000157916.19.allhmm.dydn.tn.0.05 0.17903954 Brain_Amygdala.ENSG00000157916.19.allhmm.dydn.tn.0.05 0.17795527 lasso 0.17903954
+Brain_Amygdala.ENSG00000157881.13.tx.dydn.tn.0.05 0.14076166 Brain_Amygdala.ENSG00000157881.13.enh.dn.tn.0.05 0.12117371 lasso 0.14076166
+Brain_Amygdala.ENSG00000157873.17.allhmm.dydn.tn.0.05 0.22521832 Brain_Amygdala.ENSG00000157873.17.allhmm.dydn.tn.0.05 0.28396610 enet 0.28396610
+```
 ### Model evaluation
 ### 
