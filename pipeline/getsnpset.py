@@ -6,22 +6,22 @@ dhslist=['dy','dn',['dy','dn']]
 
 # hmm
 enhdic={}
-a=open('/home/ys/lib/project/etwas2020/epianno/'+sys.argv[1]+'.enh.snp','rt')
+a=open('../data/epigenetic/'+sys.argv[1]+'.enh.snp','rt')
 for i in a:
 	enhdic[i.rstrip('\n')]=1
 a.close()
 tssdic={}
-a=open('/home/ys/lib/project/etwas2020/epianno/'+sys.argv[1]+'.tss.snp','rt')
+a=open('../data/epigenetic/'+sys.argv[1]+'.tss.snp','rt')
 for i in a:
 	tssdic[i.rstrip('\n')]=1
 a.close()
 txdic={}
-a=open('/home/ys/lib/project/etwas2020/epianno/'+sys.argv[1]+'.tx.snp','rt')
+a=open('../data/epigenetic/'+sys.argv[1]+'.tx.snp','rt')
 for i in a:
 	txdic[i.rstrip('\n')]=1
 a.close()
 otherdic={}
-a=open('/home/ys/lib/project/etwas2020/epianno/'+sys.argv[1]+'.other.snp','rt')
+a=open('../data/epigenetic/'+sys.argv[1]+'.other.snp','rt')
 for i in a:
 	otherdic[i.rstrip('\n')]=1
 a.close()
@@ -46,7 +46,7 @@ for i in a:
 
 #dhs
 dns1={}
-a=open('/home/ys/lib/project/etwas2020/epianno/'+sys.argv[1]+'.dnase.snp','rt')
+a=open('../data/epigenetic/'+sys.argv[1]+'.dnase.snp','rt')
 for i in a:
 	dns1[i.rstrip('\n')]='1'
 a.close()
@@ -62,7 +62,7 @@ a.close()
 
 #tfbs
 tfbs1={}
-a=open('/home/ys/lib/project/etwas2020/epianno/tfbs.snp','rt')
+a=open('../data/epigenetic/tfbs.snp','rt')
 for i in a:
 	tfbs1[i.rstrip('\n')]='1'
 a.close()

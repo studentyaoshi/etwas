@@ -24,9 +24,9 @@ test<-test[-1]
 testx<-as.matrix(test[-dim(test)[2]])
 prediction<-predict(lassom,newx=testx,s=lassob)
 prediction2<-predict(enetm,newx=testx,s=enetb)
-# mark r<-cor(prediction,test$expression)
-# mark r2<-cor(prediction2,test$expression)
-# mark R<-r*r
-# mark R2<-r2*r2
+r<-cor(prediction,test$expression)
+r2<-cor(prediction2,test$expression)
+R<-r*r
+R2<-r2*r2
 write.table(R,file=paste('../tem/',args[3],'.','lasso.r2',sep=''),row.names=F,col.names=F,quote=F,append=T,sep='\t')
 write.table(R2,file=paste('../tem/',args[3],'.','enet.r2',sep=''),row.names=F,col.names=F,quote=F,append=T,sep='\t')

@@ -79,8 +79,8 @@ do
 	enetr=`sort -nrk2 ../tem/$tissue.$gene.enet.r2|head -1|cut -f 2 -d' '`
 	#rm ../tem/$tissue.$gene.{lasso,enet}.r2
 	if [ `echo "$enetr > $lassor"|bc` -eq 1 ];then
-		echo $lassom' '$lassor' '$enetm' '$enetr' enet '$enetr >> ../result/$tissue.etwas.$1
+		echo $lassom' '$lassor' '$enetm' '$enetr' enet '$enetr >> ../result/$tissue.etwas
 	else
-		echo $lassom' '$lassor' '$enetm' '$enetr' lasso '$lassor >> ../result/$tissue.etwas.$1
+		echo $lassom' '$lassor' '$enetm' '$enetr' lasso '$lassor >> ../result/$tissue.etwas
 	fi
 done
