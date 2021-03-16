@@ -34,9 +34,9 @@ Epigenetic element-based Transcriptome-Wide Association Studies
 ### Heritability calculation
 Our current study is based on the premise that gene expression is heritable. Considering the heritability genes typically enriched for trait associations, we estimated gene expression heritability and only focused on the significantly heritable genes in further analyses.
 - Need files:
-	- ~/etwas/data/genotype/GTEx.plink #genotype
-	- ~/etwas/data/expression/$tissue.final #gene expression
-	- ~/etwas/data/expression/gtex.gene.final.nomhc.anno #gene annotation
+	- ~/etwas/data/genotype/GTEx.plink `genotype`
+	- ~/etwas/data/expression/$tissue.final `gene expression`
+	- ~/etwas/data/expression/gtex.gene.final.nomhc.anno `gene annotation`
 - Need softwares:
 	- [Plink](http://zzz.bwh.harvard.edu/plink/epidetails.shtml)
 	- [GCTA](http://cnsgenomics.com/software/gcta/)
@@ -68,7 +68,6 @@ For each gene *x*, we first included SNPs within the 1 MB region around gene. We
 	- ~/etwas/data/genotype/GTEx.plink `genotype`
 	- ~/etwas/data/expression/$tissue.final `gene expression`
 	- ~/etwas/data/expression/gtex.gene.final.nomhc.anno `gene annotation`
-
 - Need Softwares:
 	- [Plink](http://zzz.bwh.harvard.edu/plink/epidetails.shtml)
 - Run
@@ -80,7 +79,7 @@ sh genopheno.sh $tissue
 # Epigenetic-based SNP grouping
 sh
 ```
--Generate
+- Generate
 
 ### Train 
 For each SNP set *z*, we built an expression prediction model in the training dataset by using the lasso and the elastic net (α = 0.5) methods as implemented in the *glmnet* R package.
