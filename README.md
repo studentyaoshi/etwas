@@ -3,13 +3,13 @@
 </div>
 
 # ETWAS
-Epigenetic element-based Transcriptome-Wide Association Studies
+*E*pigenetic element-based *T*ranscriptome-*W*ide *A*ssociation Studies
 ## Introduction  
 > Transcriptome-wide association studies (TWAS) providing a powerful approach to identify novel disease risk genes and uncover possible causal genes at loci identified previously by genome-wide association study (GWAS). However, these methods did not consider the importance of epigenetic regulation in gene expression. Here, we developed a novel epigenetic element-based transcriptome-wide association study (ETWAS) that tested the effects of genetic variants on gene expression levels with the epigenetic features as prior and further mediated the association between predicted expression and complex diseases.  
 
 ## Contact
 ### Citation
-> Yao Shi, et al. [Epigenetic Element-Based Transcriptome-Wide Association Study Identifies Novel Genes for Bipolar Disorder](https://www.medrxiv.org/content/10.1101/2020.07.23.20161174v3). medRxiv 2020.  
+> *Yao Shi*, et al. [Epigenetic Element-Based Transcriptome-Wide Association Study Identifies Novel Genes for Bipolar Disorder](https://www.medrxiv.org/content/10.1101/2020.07.23.20161174v3). medRxiv 2020.  
 > The data that support the findings of this study are available from the corresponding author upon reasonable request.
 ### Author
 > **Yao Shi**, **Guo Yan**  
@@ -59,7 +59,7 @@ ENSG00000217442.3 V(G)/Vp 0.177535 0.114586 Pval 0.02242
 ENSG00000205560.12 V(G)/Vp 0.049175 0.082262 Pval 0.233
 ENSG00000100288.19 V(G)/Vp 0.000001 0.063587 Pval 0.5
 ```
-We estimated the cis heritability (1 Mb window around each gene) for each gene using restricted maximum likelihood analysis, a variance-component model with a genetic relationship matrix (GRM) estimated from genotype data in GCTA software. Genes with heritability P-value less than 0.05 were regarded as significantly heritable genes.
+We estimated the cis heritability (1 Mb window around each gene) for each gene using restricted maximum likelihood analysis, a variance-component model with a genetic relationship matrix (GRM) estimated from genotype data in GCTA software. Genes with heritability *P*-value less than 0.05 were regarded as significantly heritable genes.
 
 ### Model generation
 For each gene *x*, we first included SNPs within the 1 MB region around gene. We trained and evaluated the models for gene expression prediction in each round *y* of tenfold cross-validation using the following steps:  
@@ -73,6 +73,7 @@ For each gene *x*, we first included SNPs within the 1 MB region around gene. We
 	- ~/etwas/data/genotype/GTEx.plink `genotype`
 	- ~/etwas/data/expression/$tissue.final `gene expression`
 	- ~/etwas/data/expression/gtex.gene.final.nomhc.anno `gene annotation`
+	- ~/etwas/data/epigenetic/\* `epigenetic annotation`
 - Run
 ```
 # Get genotype for each gene
