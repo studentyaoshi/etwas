@@ -164,7 +164,7 @@ sh getfinal.sh $tissue
 	8  6  rs7767835  0 40793076  G  T
 	9  6  rs9367079  0 40808854  G  A
 	```
-We provided all the files in the **Brain_Amygdala**, the results in other Brain tissues will be uploaded soon.
+We provided all the needed files and results in the **Brain_Amygdala**, the results in other Brain tissues will be uploaded soon.
 ### TWAS
 After getting the best model for gene *x*, we could predict expression directly for genotyped samples using the effect sizes from the reference panels and measure the association between predicted expression and a trait. On the other hand, the [ImpG-Summary](https://academic.oup.com/bioinformatics/article/30/20/2906/2422225) algorithm has been used to extend to train on the genetic component of expression based on GWAS summary data. Thus, we could indirectly estimate the association between predicted expression and a trait as the weighted linear combination of SNP-trait standardized effect sizes while accounting for linkage disequilibrium (LD) among SNPs. [FUSION](http://gusevlab.org/projects/fusion/) was used to conduct the transcriptome-wide association testing. The 1000 Genomes v3 LD panel was used for the ETWAS.
 - Need files
