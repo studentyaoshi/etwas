@@ -124,7 +124,38 @@ sh getfinal.sh $tissue
 	```
 	- ~/etwas/result/$tissue.finish.genes
 	- ~/etwas/result/$tissue.rdata/
-
-<mark>The results in other Brain tissues will be uploaded soon.</mark>
+	```
+	ENSG00000001167.14.RData
+	ENSG00000004975.11.RData
+	ENSG00000005339.14.RData
+	ENSG00000005469.11.RData
+	ENSG00000005471.15.RData
+	```
+	$gene.RData includes "wgt.matrix" and "snps"
+	```
+	> wgt.matrix
+				etwas       top1
+	rs2916256   2.46794091 -0.3117201
+	rs9394715  -1.15137795 -0.1625038
+	rs12664653 -0.34564314 -0.2289465
+	rs10947907 -0.26958668  0.1971410
+	rs4521573  -0.11433455 -0.7497704
+	rs4236071  -0.12000062 -0.7489674
+	rs9394733  -0.06642380  0.7040359
+	rs7767835  -0.02499029  0.4008386
+	rs9367079   1.38613939  0.1223406
+	> snps
+	  V1         V2 V3       V4 V5 V6
+	1  6  rs2916256  0 40383313  C  T
+	2  6  rs9394715  0 40659686  C  A
+	3  6 rs12664653  0 40673177  G  A
+	4  6 rs10947907  0 40674904  C  T
+	5  6  rs4521573  0 40773205  C  T
+	6  6  rs4236071  0 40782300  T  C
+	7  6  rs9394733  0 40785517  C  T
+	8  6  rs7767835  0 40793076  G  T
+	9  6  rs9367079  0 40808854  G  A
+	```
+*The results in other Brain tissues will be uploaded soon.*
 ### TWAS
 After getting the best model for gene *x*, we could predict expression directly for genotyped samples using the effect sizes from the reference panels and measure the association between predicted expression and a trait. On the other hand, the [ImpG-Summary](https://academic.oup.com/bioinformatics/article/30/20/2906/2422225) algorithm has been used to extend to train on the genetic component of expression based on GWAS summary data. Thus, we could indirectly estimate the association between predicted expression and a trait as the weighted linear combination of SNP-trait standardized effect sizes while accounting for linkage disequilibrium (LD) among SNPs. [FUSION](http://gusevlab.org/projects/fusion/) was used to conduct the transcriptome-wide association testing. The 1000 Genomes v3 LD panel was used for the ETWAS.
