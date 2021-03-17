@@ -107,7 +107,7 @@ sh train.sh $tissue
 	GTEX-P44G	GTEX-P44G	0.08647
 	GTEX-X4XX	GTEX-X4XX	0.02661
 	GTEX-1EX96	GTEX-1EX96	0
-		```
+	```
 	- ~/etwas/tem/$tissue.$gene.minor `minor alleles for SNPs in gene`
 	```
 	> Brain_Amygdala.ENSG00000024526.16.minor
