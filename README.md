@@ -177,3 +177,12 @@ sh predict.sh $tissue $trait
 ```
 The $trait indicates the name of the summary data in ~/etwas/data/gwas/, such as `PGC_BIP2018`.
 - Generate
+	- ~/etwas/result/twas/$trait.$tissue.$chr
+	```
+	PANEL	FILE	ID	CHR	P0	P1	HSQ	BEST.GWAS.ID	BEST.GWAS.Z	EQTL.ID	EQTL.R2	EQTL.Z	EQTL.GWAS.Z	NSNP	NWGT	MODEL	MODELCV.R2    MODELCV.PV	TWAS.Z	TWAS.P	PERM.PV	PERM.N	PERM.ANL_PV
+	Brain_Amygdala	~/etwas/result/Brain_Amygdala.rdata/ENSG00000169885.9.RData ENSG00000169885.9	1	1.91e+06	1.92e+06	0	rs34238514	-1.847	rs12041925	0	-0.8795	 0.588   7	 7		0	0	 1.31872	0.18726	0.0000	    0	 0.00e+00
+	Brain_Amygdala	~/etwas/result/Brain_Amygdala.rdata/ENSG00000116151.13.RData	ENSG00000116151.13	1	2.32e+06	2.39e+06	0	rs2500271	-2.840	rs4531246	0	 0.9934	-0.306	13	13		0	0	-0.42751	0.66901	0.0000	    0	 0.00e+00
+	Brain_Amygdala	~/etwas/result/Brain_Amygdala.rdata/ENSG00000157916.19.RData	ENSG00000157916.19	1	2.39e+06	2.41e+06	0	rs1108600	-2.051	rs12410859	0	 0.9923	-1.707	16	16		0	0	-0.70353	0.48172	0.0000	    0	 0.00e+00
+	Brain_Amygdala	~/etwas/result/Brain_Amygdala.rdata/ENSG00000157881.13.RData	ENSG00000157881.13	1	2.51e+06	2.53e+06	0	rs1108600	-2.051	rs6603813	0	-0.9847	-1.729	 9	 9		0	0	-1.66058	0.09680	0.0000	    0	 0.00e+00
+	Brain_Amygdala	~/etwas/result/Brain_Amygdala.rdata/ENSG00000215912.12.RData	ENSG00000215912.12	1	2.64e+06	2.80e+06	0	rs2503701	 1.494	rs2503701	0	 0.2924	 1.494	 2	 2		0	0	-0.49232	0.62250	0.0000	    0	 0.00e+00
+		```
