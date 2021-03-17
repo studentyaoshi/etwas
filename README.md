@@ -64,6 +64,7 @@ The $tissue indicates the tissue name, such as `Brain_Amygdala`.
 	ENSG00000100288.19 V(G)/Vp 0.000001 0.063587 Pval 0.5
 	```
 	- ~/etwas/result/$tissue.P005 `gene list with heritability p-value less than 0.05`  
+
 We estimated the cis heritability (1 Mb window around each gene) for each gene using restricted maximum likelihood analysis, a variance-component model with a genetic relationship matrix (GRM) estimated from genotype data in GCTA software. Genes with heritability *P*-value less than 0.05 were regarded as significantly heritable genes.
 
 ### Model generation
