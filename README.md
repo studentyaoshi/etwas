@@ -38,13 +38,13 @@ Our current study is based on the premise that gene expression is heritable. Con
 	- ~/etwas/data/genotype/GTEx.plink `genotype`
 	- ~/etwas/data/expression/$tissue.final `gene expression`
 	- ~/etwas/data/expression/gtex.gene.final.nomhc.anno `gene annotation`
-```
-ENSG00000186092.4	1	69091	70008	+
-ENSG00000278566.1	1	450740	451678	-
-ENSG00000273547.1	1	685716	686654	-
-ENSG00000187634.11	1	923928	944581	+
-ENSG00000188976.10	1	944204	959309	-
-```
+	```
+	ENSG00000186092.4	1	69091	70008	+
+	ENSG00000278566.1	1	450740	451678	-
+	ENSG00000273547.1	1	685716	686654	-
+	ENSG00000187634.11	1	923928	944581	+
+	ENSG00000188976.10	1	944204	959309	-
+	```
 - Run
 ```
 cd ~/etwas/pipeline
@@ -53,13 +53,13 @@ sh heritability.sh $tissue
 The $tissue indicates the tissue name, such as Brain_Amygdala.
 - Generate
 	- ~/etwas/result/$tissue.heritability
-```
-ENSG00000177989.13 V(G)/Vp 0.166964 0.113988 Pval 0.03208
-ENSG00000130487.5 V(G)/Vp 0.063453 0.091522 Pval 0.218
-ENSG00000217442.3 V(G)/Vp 0.177535 0.114586 Pval 0.02242
-ENSG00000205560.12 V(G)/Vp 0.049175 0.082262 Pval 0.233
-ENSG00000100288.19 V(G)/Vp 0.000001 0.063587 Pval 0.5
-```
+	```
+	ENSG00000177989.13 V(G)/Vp 0.166964 0.113988 Pval 0.03208
+	ENSG00000130487.5 V(G)/Vp 0.063453 0.091522 Pval 0.218
+	ENSG00000217442.3 V(G)/Vp 0.177535 0.114586 Pval 0.02242
+	ENSG00000205560.12 V(G)/Vp 0.049175 0.082262 Pval 0.233
+	ENSG00000100288.19 V(G)/Vp 0.000001 0.063587 Pval 0.5
+	```
 We estimated the cis heritability (1 Mb window around each gene) for each gene using restricted maximum likelihood analysis, a variance-component model with a genetic relationship matrix (GRM) estimated from genotype data in GCTA software. Genes with heritability *P*-value less than 0.05 were regarded as significantly heritable genes.
 
 ### Model generation
@@ -75,13 +75,13 @@ For each gene *x*, we first included SNPs within the 1 MB region around gene. We
 	- ~/etwas/data/expression/$tissue.final `gene expression`
 	- ~/etwas/data/expression/gtex.gene.final.nomhc.anno `gene annotation`
 	- ~/etwas/data/epigenetic/\* `epigenetic annotation`
-```
-chr1	10131	10369
-chr1	10427	10574
-chr1	57344	57408
-chr1	235654	235786
-chr1	235887	235971
-```
+	```
+	chr1	10131	10369
+	chr1	10427	10574
+	chr1	57344	57408
+	chr1	235654	235786
+	chr1	235887	235971
+	```
 - Run
 ```
 # Get genotype for each gene
@@ -93,13 +93,13 @@ sh train.sh $tissue
 ```
 - Generate
 	- ~/etwas/result/$tissue.etwas
-```
-Brain_Amygdala.ENSG00000169885.9.enh.dn.tn.0.05 0.09449683 Brain_Amygdala.ENSG00000169885.9.enh.dn.tn.0.05 0.09388865 lasso 0.09449683
-Brain_Amygdala.ENSG00000116151.13.tx.dn.tn.0.05 0.12374554 Brain_Amygdala.ENSG00000116151.13.tx.dn.tn.0.05 0.12354224 lasso 0.12374554
-Brain_Amygdala.ENSG00000157916.19.tx.dn.tn.0.05 0.11186665 Brain_Amygdala.ENSG00000157916.19.tx.dn.tn.0.05 0.11255954 enet 0.11255954
-Brain_Amygdala.ENSG00000157881.13.enh.dn.tn.0.05 0.12066406 Brain_Amygdala.ENSG00000157881.13.enh.dn.tn.0.05 0.12117371 enet 0.12117371
-Brain_Amygdala.ENSG00000157873.17.tx.dn.tn.0.05 0.17463774 Brain_Amygdala.ENSG00000157873.17.tx.dn.tn.0.05 0.23938381 enet 0.23938381
-```
+	```
+	Brain_Amygdala.ENSG00000169885.9.enh.dn.tn.0.05 0.09449683 Brain_Amygdala.ENSG00000169885.9.enh.dn.tn.0.05 0.09388865 lasso 0.09449683
+	Brain_Amygdala.ENSG00000116151.13.tx.dn.tn.0.05 0.12374554 Brain_Amygdala.ENSG00000116151.13.tx.dn.tn.0.05 0.12354224 lasso 0.12374554
+	Brain_Amygdala.ENSG00000157916.19.tx.dn.tn.0.05 0.11186665 Brain_Amygdala.ENSG00000157916.19.tx.dn.tn.0.05 0.11255954 enet 0.11255954
+	Brain_Amygdala.ENSG00000157881.13.enh.dn.tn.0.05 0.12066406 Brain_Amygdala.ENSG00000157881.13.enh.dn.tn.0.05 0.12117371 enet 0.12117371
+	Brain_Amygdala.ENSG00000157873.17.tx.dn.tn.0.05 0.17463774 Brain_Amygdala.ENSG00000157873.17.tx.dn.tn.0.05 0.23938381 enet 0.23938381
+	```
 ### Get final model
 For each model, we evaluated its prediction performance by cross-validation R<sup>2</sup> between the predicted gene expression and the observed gene expression of the testing data and averaged all the cross-validation data. For each gene *x*, the model with the highest mean R<sup>2</sup> in the testing data was selected as the best model. Based on the parameters of the best model, we performed the eQTL analyses again using all the samples in the reference data and constructed each gene’s final prediction model.
 - Need files:
@@ -124,5 +124,7 @@ sh getfinal.sh $tissue
 	```
 	- ~/etwas/result/$tissue.finish.genes
 	- ~/etwas/result/$tissue.rdata/
+
+<mark>The results in other Brain tissues will be uploaded soon.</mark>
 ### TWAS
 After getting the best model for gene *x*, we could predict expression directly for genotyped samples using the effect sizes from the reference panels and measure the association between predicted expression and a trait. On the other hand, the [ImpG-Summary](https://academic.oup.com/bioinformatics/article/30/20/2906/2422225) algorithm has been used to extend to train on the genetic component of expression based on GWAS summary data. Thus, we could indirectly estimate the association between predicted expression and a trait as the weighted linear combination of SNP-trait standardized effect sizes while accounting for linkage disequilibrium (LD) among SNPs. [FUSION](http://gusevlab.org/projects/fusion/) was used to conduct the transcriptome-wide association testing. The 1000 Genomes v3 LD panel was used for the ETWAS.
