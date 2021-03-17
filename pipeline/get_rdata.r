@@ -1,0 +1,7 @@
+args = commandArgs(TRUE)
+data<-read.table(args[1],header=F)
+wgt.matrix=matrix(data$V2)
+wgt.matrix=cbind(wgt.matrix,data$V3)
+dimnames(wgt.matrix)=list(data$V1,c('etwas','top1'))
+snps<-read.table(args[2])
+save(wgt.matrix,snps,file=args[3])
