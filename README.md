@@ -34,7 +34,7 @@
 ## Schematic of ETWAS
 ### Heritability calculation
 Our current study is based on the premise that gene expression is heritable. Considering the heritability genes typically enriched for trait associations, we estimated gene expression heritability and only focused on the significantly heritable genes in further analyses.
-- Need files:
+- Need files
 	- ~/etwas/data/genotype/GTEx.plink `genotype`
 	- ~/etwas/data/expression/$tissue.final `gene expression`
 	- ~/etwas/data/expression/gtex.gene.final.nomhc.anno `gene annotation`
@@ -69,8 +69,8 @@ For each gene *x*, we first included SNPs within the 1 MB region around gene. We
 	For each SNP, an epigenomic feature was labeled if the SNP overlapped with the feature.  
 3. We obtained multiple SNP sets according to the eQTL *P*-value threshold (5×10<sup>-2</sup>, 1×10<sup>-2</sup>, 1×10<sup>-3</sup>, 1×10<sup>-4</sup>, 1×10<sup>-5</sup>, 1×10<sup>-6</sup>), chromatin segmentation state (*promoter*, *transcription*, *enhancer*, and *others*), TFBS annotation, and DHS annotation.  
 4. For each SNP set *z*, we built an expression prediction model in the training dataset by using the lasso and the elastic net (α = 0.5) methods as implemented in the *glmnet* R package.
-- Need files:
-	- ~/etwas/result/${tissue}.P005 `gene list with heritability p-value less than 0.05`
+- Need files
+	- ~/etwas/result/$tissue.P005 `gene list with heritability p-value less than 0.05`
 	- ~/etwas/data/genotype/GTEx.plink `genotype`
 	- ~/etwas/data/expression/$tissue.final `gene expression`
 	- ~/etwas/data/expression/gtex.gene.final.nomhc.anno `gene annotation`
@@ -103,6 +103,26 @@ Brain_Amygdala.ENSG00000157873.17.tx.dn.tn.0.05 0.17463774 Brain_Amygdala.ENSG00
 ### Get final model
 For each model, we evaluated its prediction performance by cross-validation R<sup>2</sup> between the predicted gene expression and the observed gene expression of the testing data and averaged all the cross-validation data. For each gene *x*, the model with the highest mean R<sup>2</sup> in the testing data was selected as the best model. Based on the parameters of the best model, we performed the eQTL analyses again using all the samples in the reference data and constructed each gene’s final prediction model.
 - Need files:
-	- ~/etwas/result/$tissue.etwas
+	- ~/etwas/result/$tissue.P005 `gene list with heritability p-value less than 0.05`
+	- ~/etwas/result/$tissue.etwas `etwas results`
+	- ~/etwas/tem/$tissue.$gene.plink `genotype for each gene`
+	- ~/etwas/tem/$tissue.$gene.expression `expression for each gene`
+- Run
+```
+cd ~/etwas/pipeline
+sh getfinal.sh $tissue
+```
+- Generate
+	- ~/etwas/result/$tissue.pos
+	```
+	WGT	ID	CHR	P0	P1	N
+	Brain_Amygdala.rdata/ENSG00000169885.9.RData	ENSG00000169885.9   1	1914827	1917296	120
+	Brain_Amygdala.rdata/ENSG00000116151.13.RData	ENSG00000116151.13  1	2321253	2391707	120
+	Brain_Amygdala.rdata/ENSG00000157916.19.RData	ENSG00000157916.19  1	2391775	2405444	120
+	Brain_Amygdala.rdata/ENSG00000157881.13.RData	ENSG00000157881.13  1	2508533	2526628	120
+	Brain_Amygdala.rdata/ENSG00000215912.12.RData	ENSG00000215912.12  1	2635976	2801717	120
+	```
+	- ~/etwas/result/$tissue.finish.genes
+	- ~/etwas/result/$tissue.rdata/
 ### TWAS
 After getting the best model for gene *x*, we could predict expression directly for genotyped samples using the effect sizes from the reference panels and measure the association between predicted expression and a trait. On the other hand, the [ImpG-Summary](https://academic.oup.com/bioinformatics/article/30/20/2906/2422225) algorithm has been used to extend to train on the genetic component of expression based on GWAS summary data. Thus, we could indirectly estimate the association between predicted expression and a trait as the weighted linear combination of SNP-trait standardized effect sizes while accounting for linkage disequilibrium (LD) among SNPs. [FUSION](http://gusevlab.org/projects/fusion/) was used to conduct the transcriptome-wide association testing. The 1000 Genomes v3 LD panel was used for the ETWAS.
