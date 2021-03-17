@@ -134,7 +134,7 @@ sh getfinal.sh $tissue
 	$gene.RData includes "wgt.matrix" and "snps"
 	```
 	> wgt.matrix
-		etwas       top1
+			etwas       top1
 	rs2916256   2.46794091 -0.3117201
 	rs9394715  -1.15137795 -0.1625038
 	rs12664653 -0.34564314 -0.2289465
