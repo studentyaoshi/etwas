@@ -167,10 +167,14 @@ The results in other **Brain tissues** will be uploaded soon.
 ### TWAS
 After getting the best model for gene *x*, we could predict expression directly for genotyped samples using the effect sizes from the reference panels and measure the association between predicted expression and a trait. On the other hand, the [ImpG-Summary](https://academic.oup.com/bioinformatics/article/30/20/2906/2422225) algorithm has been used to extend to train on the genetic component of expression based on GWAS summary data. Thus, we could indirectly estimate the association between predicted expression and a trait as the weighted linear combination of SNP-trait standardized effect sizes while accounting for linkage disequilibrium (LD) among SNPs. [FUSION](http://gusevlab.org/projects/fusion/) was used to conduct the transcriptome-wide association testing. The 1000 Genomes v3 LD panel was used for the ETWAS.
 - Need files
-
+	- ~/etwas/result/$tissue.pos `etwas results`
+	- ~/etwas/result/$tissue.rdata/ `etwas results`
+	- ~/etwas/data/LDREF/ `ld reference data`
+	- ~/etwas/data/gwas/$trait.sumstats.gz
+The $trait.sumstats.gz is the [summary statistics file format](https://github.com/bulik/ldsc/wiki/Summary-Statistics-File-Format).
 - Run
 ```
 sh predict.sh $tissue $trait 
 ```
-The $trait indicates the name of the summary data, such as `PGC_BIP2018`.
+The $trait indicates the name of the summary data in ~/etwas/data/gwas/, such as `PGC_BIP2018`.
 - Generate
