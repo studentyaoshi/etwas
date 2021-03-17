@@ -97,6 +97,9 @@ sh genopheno.sh $tissue
 sh train.sh $tissue
 ```
 - Generate
+	- ~/etwas/tem/$tissue.$gene.plink `genotype for each gene`
+	- ~/etwas/tem/$tissue.$gene.expression `expression for each gene`
+	- ~/etwas/tem/$tissue.$gene.minor `minor alleles for SNPs in gene`
 	- ~/etwas/result/$tissue.etwas
 	```
 	Brain_Amygdala.ENSG00000169885.9.enh.dn.tn.0.05 0.09449683 Brain_Amygdala.ENSG00000169885.9.enh.dn.tn.0.05 0.09388865 lasso 0.09449683
