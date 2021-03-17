@@ -179,6 +179,7 @@ The $trait indicates the name of the summary data in ~/etwas/data/gwas/, such as
 - Generate
 	- ~/etwas/result/twas/$trait.$tissue.$chr
 	```
+	> PGC_BIP2018.Brain_Amygdala.1
 	PANEL	FILE	ID	CHR	P0	P1	HSQ	BEST.GWAS.ID	BEST.GWAS.Z	EQTL.ID	EQTL.R2	EQTL.Z	EQTL.GWAS.Z	NSNP	NWGT	MODEL	MODELCV.R2    MODELCV.PV	TWAS.Z	TWAS.P	PERM.PV	PERM.N	PERM.ANL_PV
 	Brain_Amygdala	~/etwas/result/Brain_Amygdala.rdata/ENSG00000169885.9.RData ENSG00000169885.9	1	1.91e+06	1.92e+06	0	rs34238514	-1.847	rs12041925	0	-0.8795	 0.588   7	 7		0	0	 1.31872	0.18726	0.0000	    0	 0.00e+00
 	Brain_Amygdala	~/etwas/result/Brain_Amygdala.rdata/ENSG00000116151.13.RData	ENSG00000116151.13	1	2.32e+06	2.39e+06	0	rs2500271	-2.840	rs4531246	0	 0.9934	-0.306	13	13		0	0	-0.42751	0.66901	0.0000	    0	 0.00e+00
