@@ -99,7 +99,25 @@ sh train.sh $tissue
 - Generate
 	- ~/etwas/tem/$tissue.$gene.plink `genotype for each gene`
 	- ~/etwas/tem/$tissue.$gene.expression `expression for each gene`
+	```
+	> Brain_Amygdala.ENSG00000024526.16.expression
+	FID	IID	ENSG00000024526.16
+	GTEX-13O3Q	GTEX-13O3Q	0.03047
+	GTEX-1C6VR	GTEX-1C6VR	0.02316
+	GTEX-P44G	GTEX-P44G	0.08647
+	GTEX-X4XX	GTEX-X4XX	0.02661
+	GTEX-1EX96	GTEX-1EX96	0
+		```
 	- ~/etwas/tem/$tissue.$gene.minor `minor alleles for SNPs in gene`
+	```
+	> Brain_Amygdala.ENSG00000024526.16.minor
+	SNP	A1
+	rs1977785	G
+	rs12745192	G
+	rs6695089	A
+	rs7554654	G
+	rs11209084	G
+	```
 	- ~/etwas/result/$tissue.etwas
 	```
 	Brain_Amygdala.ENSG00000169885.9.enh.dn.tn.0.05 0.09449683 Brain_Amygdala.ENSG00000169885.9.enh.dn.tn.0.05 0.09388865 lasso 0.09449683
