@@ -123,11 +123,13 @@ sh getfinal.sh $tissue
 	Brain_Amygdala.rdata/ENSG00000215912.12.RData	ENSG00000215912.12  1	2635976	2801717	120
 	```
 	- ~/etwas/result/$tissue.finish.genes
+	```
 	ENSG00000001167.14
 	ENSG00000004975.11
 	ENSG00000005339.14
 	ENSG00000005469.11
 	ENSG00000005471.15
+	```
 	- ~/etwas/result/$tissue.rdata/ `this folder includes all the .RData files in the $tissue`
 	```
 	ENSG00000001167.14.RData
