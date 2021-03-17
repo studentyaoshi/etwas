@@ -28,6 +28,7 @@
 > - [**Python**](https://www.python.org/downloads/)
 > - [**Plink**](http://zzz.bwh.harvard.edu/plink/epidetails.shtml)
 > - [**FUSION**](http://gusevlab.org/projects/fusion/)
+> - [**LDSC**](https://github.com/bulik/ldsc)
 > - [**R**](https://www.r-project.org/)
 >	- R packages: glmnet, doParallel.  
 
