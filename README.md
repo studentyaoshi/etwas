@@ -50,7 +50,7 @@ Our current study is based on the premise that gene expression is heritable. Con
 cd ~/etwas/pipeline
 sh heritability.sh $tissue
 ```
-The $tissue indicates the tissue name, such as Brain_Amygdala.
+The $tissue indicates the tissue name, such as `Brain_Amygdala`.
 - Generate
 	- ~/etwas/result/$tissue.heritability
 	```
@@ -169,5 +169,8 @@ After getting the best model for gene *x*, we could predict expression directly 
 - Need files
 
 - Run
-sh predict.sh $tissue $trait.sumstats.gz
+```
+sh predict.sh $tissue $trait 
+```
+The $trait indicates the name of the summary data, such as `PGC_BIP2018`.
 - Generate
