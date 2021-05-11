@@ -208,9 +208,9 @@ After getting the best model for gene *x*, we could predict expression directly 
 	- ~/etwas/result/$tissue.pos `etwas results`
 	- ~/etwas/result/$tissue.rdata/ `etwas results`
 	- ~/etwas/data/LDREF/ `ld reference data`
-	- ~/etwas/data/gwas/$trait.sumstats.gz 
+	- ~/etwas/data/gwas/$trait.sumstats.gz `summary statistic of trait`
 	
-	The summary statistics file format can be found [**here**](https://github.com/bulik/ldsc/wiki/Summary-Statistics-File-Format).
+	The summary statistic file format can be found [**here**](https://github.com/bulik/ldsc/wiki/Summary-Statistics-File-Format).
 - Run
 ```
 sh predict.sh $tissue $trait 
