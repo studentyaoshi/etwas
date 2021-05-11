@@ -30,6 +30,7 @@
 > - [**FUSION**](http://gusevlab.org/projects/fusion/)
 > - [**LDSC**](https://github.com/bulik/ldsc)
 > - [**R**](https://www.r-project.org/)
+> - [**Liftover**](https://genome.sph.umich.edu/wiki/LiftOver)if you need to convert genome position to another genome assembly
 >	- R packages: glmnet, doParallel.  
 
 ## Schematic of ETWAS
