@@ -37,7 +37,8 @@
 Our current study is based on the premise that gene expression is heritable. Considering the heritability genes typically enriched for trait associations, we estimated gene expression heritability and only focused on the significantly heritable genes in further analyses.
 - Need files
 	- ~/etwas/data/genotype/GTEx.plink `genotype`
-	All allele in this study were aligned on the forward strand and the SNP position were assigned to the GRCh38 human reference genome assembly. [**plink format**](http://zzz.bwh.harvard.edu/plink/data.shtml) 
+	
+	All allele in this study were aligned on the forward strand and the SNP position were assigned to the GRCh38 human reference genome assembly. The genotype in plink format can be found [**here**](http://zzz.bwh.harvard.edu/plink/data.shtml).
 	- ~/etwas/data/expression/$tissue.final `gene expression`
 	- ~/etwas/data/expression/gtex.gene.final.nomhc.anno `gene annotation`
 	```
