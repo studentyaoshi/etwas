@@ -38,8 +38,16 @@ Our current study is based on the premise that gene expression is heritable. Con
 - Need files
 	- ~/etwas/data/genotype/GTEx.plink `genotype`
 	
-	All allele in this study were aligned on the forward strand and the SNP position were assigned to the GRCh38 human reference genome assembly. The genotype in plink format can be found [**here**](http://zzz.bwh.harvard.edu/plink/data.shtml).
+	Note: All allele in this study were aligned on the forward strand and the SNP position were assigned to the GRCh38 human reference genome assembly. The genotype in plink format can be found [**here**](http://zzz.bwh.harvard.edu/plink/data.shtml#bed).
 	- ~/etwas/data/expression/$tissue.final `gene expression`
+	```
+	FID	IID	ENSG00000186092.4	ENSG00000278566.1	ENSG00000273547.1	ENSG00000187634.11	ENSG00000188976.10	ENSG00000187961.13	...
+	GTEX-13O3Q	GTEX-13O3Q	0.2272	0.1388	0.02777	0.49	30.3	4.328	...
+	GTEX-1C6VR	GTEX-1C6VR	0.1296	0.1267	0.03167	0.9371	13.5	2.371	...
+	GTEX-P44G	GTEX-P44G	0.3325	0.266	0.1478	0.7702	19.54	3.004	...
+	GTEX-X4XX	GTEX-X4XX	0.07441	0.1455	0.1455	1.323	26.77	11.23	...
+	GTEX-1EX96	GTEX-1EX96	0.07624	0.04969	0	0.3575	8.479	1.611	...
+	```
 	- ~/etwas/data/expression/gtex.gene.final.nomhc.anno `gene annotation`
 	```
 	ENSG00000186092.4	1	69091	70008	+
@@ -111,6 +119,8 @@ sh train.sh $tissue
 	GTEX-1EX96	GTEX-1EX96	0
 	```
 	- ~/etwas/tem/$tissue.$gene.minor `minor alleles for SNPs in gene`
+	
+	Note: We assigned the minor allele (in all reference samples) to be the reference allele (A1) to avoid the allele difference among cross-validation.
 	```
 	> Brain_Amygdala.ENSG00000024526.16.minor
 	SNP	A1
