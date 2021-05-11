@@ -31,8 +31,10 @@
 > - [**LDSC**](https://github.com/bulik/ldsc)
 > - [**R**](https://www.r-project.org/)
 >   - R packages: glmnet, doParallel.
-> - [**Liftover**](https://genome.sph.umich.edu/wiki/LiftOver) (if you need to convert genome position to another genome assembly)  
 
+If you need to convert genome position to another genome assembly, you also need
+> - [**Liftover**](https://genome.sph.umich.edu/wiki/LiftOver)  
+> - [**Tabix**](https://www.htslib.org/doc/tabix.html)
 ## Schematic of ETWAS
 ### Heritability calculation
 Our current study is based on the premise that gene expression is heritable. Considering the heritability genes typically enriched for trait associations, we estimated gene expression heritability and only focused on the significantly heritable genes in further analyses.
