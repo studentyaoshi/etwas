@@ -1,6 +1,6 @@
 #  The pipeline is used to align all alleles on the forward strand.
 
-## Download all the genome files in ~/etwas/pipeline/flip/chr{1..22}.fa
+## Download all the genome files and save them in ~/etwas/pipeline/flip/chr{1..22}.fa
 
 ## Extract SNPs without ambiguity
 python checkstring.py data.bim > withchain.bim  
