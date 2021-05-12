@@ -39,7 +39,7 @@ Our current study is based on the premise that gene expression is heritable. Con
 	
 	The genotype in plink format can be found [**here**](http://zzz.bwh.harvard.edu/plink/data.shtml#bed).
 
-	Note: All allele in this study were aligned on the forward strand and the SNP position were assigned to the GRCh38 human reference genome assembly. We provide the pipeline to flip the strand, please see [**flip.sh**](https://github.com/studentyaoshi/etwas/tree/master/pipeline/flip).
+	Note: All alleles in this study were aligned on the forward strand and the SNP positions were assigned to the GRCh38 human reference genome assembly. We provide the pipeline to flip the strand, please see [**flip.sh**](https://github.com/studentyaoshi/etwas/tree/master/pipeline/flip).
 	- ~/etwas/data/expression/$tissue.final `gene expression`
 	```
 	FID	IID	ENSG00000186092.4	ENSG00000278566.1	ENSG00000273547.1	ENSG00000187634.11	ENSG00000188976.10	ENSG00000187961.13	...
