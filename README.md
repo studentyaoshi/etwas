@@ -10,7 +10,7 @@
 ## Contact
 ### Citation
 > **Method**: **Yao Shi**, et al. [Epigenetic Element-Based Transcriptome-Wide Association Study Identifies Novel Genes for Bipolar Disorder](https://academic.oup.com/schizophreniabulletin/advance-article-abstract/doi/10.1093/schbul/sbab023/6190174?redirectedFrom=fulltext). *Schizophrenia Bulletin* 2021.  
-> **Application**: **Yao Shi**, et al. A Transcriptome-wide Association Study Identifies Susceptibility Genes for Parkinson’s Disease. *Under Review*.  
+> **Application**: **Yao Shi**, et al. A Transcriptome-wide Association Study Identifies Susceptibility Genes for Parkinson’s Disease. *Minor Revision*.  
 > The data that support the findings of this study are available from the corresponding author upon reasonable request.
 ### Author
 > **Yao Shi**, **Guo Yan**  
