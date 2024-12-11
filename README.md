@@ -1,7 +1,3 @@
-<div align=center>
-<img src="./logo/bigc.png" width="400" height="200" slt="bigclogo" align="middle" />
-</div>
-
 # ETWAS
 **E**pigenetic element-based **T**ranscriptome-**W**ide **A**ssociation **S**tudies
 ## Introduction  
